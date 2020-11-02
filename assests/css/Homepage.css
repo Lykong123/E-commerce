@@ -122,4 +122,41 @@
     margin: 0;
     width: 100%;
   }
+  .column {
+    float: left;
+    padding: 10px;
+  }
+  .left {
+    width: 20%;
+  }
+  .right {
+    width: 80%;
+  }
+  .btn{
+    background-color: white;
+    height: 25px;
+    margin-bottom: 20px;
+    border: 0.5 solid gray; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    outline: none;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #myMenu{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  #myMenu li a {
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    display: block;
+  }
+  #myMenu li a:hover {
+    background-color: #eee;;
+  }
   
