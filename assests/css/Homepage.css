@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
   }
   body{
     overflow: auto;
@@ -69,3 +70,56 @@
   a{
       text-decoration: none;
   }
+  .flex-content {
+    display: flex;
+    color: white;
+    flex-direction: row;  
+  }
+  .flex-content > div{
+    align-items: center;
+    margin: 10px;
+  }
+  .flex-content .content{
+    margin-left: 3%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 2%;
+    padding-top: 5px;
+  }
+  .content img{
+    width:70px;
+  }
+  .content1 {
+    background-color: rgb(241, 147, 163);
+    width: 100%;
+    border: solid 1px black;
+    margin-left: 20px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+  .content2 {
+    background-color:  rgb(243, 205, 134);
+    width: 100%;
+    border: solid 1px black;
+    margin-left: 20px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+  .content3 {
+    background-color: rgb(223, 126, 223);
+    width: 100%;
+    border: solid 1px black;
+    margin-left: 20px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+  .header{
+    margin-right: auto;
+    margin-bottom: 80px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
