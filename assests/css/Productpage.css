@@ -97,6 +97,7 @@
     margin-left: 20px;
     padding: 15px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    height: 162px;
   }
   .content2 {
     background-color:  rgb(243, 205, 134);
@@ -105,6 +106,7 @@
     margin-left: 20px;
     padding: 15px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    height: 162px;
   }
   .content3 {
     background-color: rgb(223, 126, 223);
@@ -113,6 +115,7 @@
     margin-left: 20px;
     padding: 15px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    height: 162px;
   }
   .header{
     margin-right: auto;
@@ -139,6 +142,7 @@
     border: 0.5 solid gray; 
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     outline: none;
+    margin-top: 40px;
   }
   .row:after {
     content: "";
@@ -159,3 +163,74 @@
   #myMenu li a:hover {
     background-color: #eee;;
   }
+  .description{
+    width: 100%;
+    border: solid 2px black;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+  .picture{
+    float: left;
+    padding: 15px;
+    width: 30%;
+    text-align: center;
+  }
+  .shirt-description{
+    width: 70%;
+    float: right;
+    padding: 15px;
+  }
+  .box {
+    width: 40px;
+    height: 18px;  
+    border: none;
+    background-color: orange;
+    box-sizing: border-box;
+    border-radius: 2em / 2em;
+    float: right;
+    margin-bottom: 30px;
+  }
+  .small-row{
+    display: flex;
+  }
+  .small-col{
+    flex: 33.3%;
+    padding: 1px;
+    border: solid 0.5px gainsboro;
+    margin: 2%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  .vl {
+    border-left: 1.5px solid gray;
+    height: 300px;
+    left: 30%;
+    position: relative;
+    top: 0;
+    padding: 15px;
+  }
+  .cart{
+    background-color: #f1f1f1;
+    color: black;
+    padding: 8px 3px;
+    width: 15%;
+    margin-top: 80px;
+  }
+  a:hover{
+    background-color: #ddd;
+    color: black;
+  }
+  .button {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: black;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2%;
+    cursor: pointer;
+    border: none;
+    border-radius: 2em / 2em;
+  }
+  .button1 {background-color: #e7e7e7;}  
+  .button2 {background-color: #e7e7e7;} 
