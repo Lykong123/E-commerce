@@ -210,11 +210,11 @@
     padding: 15px;
   }
   .cart{
-    background-color: #f1f1f1;
-    color: black;
+    background-color: white;
     padding: 8px 3px;
     width: 15%;
     margin-top: 80px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
   a:hover{
     background-color: #ddd;
@@ -234,3 +234,28 @@
   }
   .button1 {background-color: #e7e7e7;}  
   .button2 {background-color: #e7e7e7;} 
+  .comment{
+    border: 2px solid gray;
+    padding: 15px;
+  }
+  .head-description{
+    float: right;
+    display: inline;
+  }
+  .head-description1{
+    float: right;
+    margin-right: 630px;
+    margin-top: 10px;
+  }
+  fieldset {
+    background-color: white;
+    height: 150px;
+    margin-top: 20px;
+  }
+  legend {
+    color: black;
+    padding: 5px 10px;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
