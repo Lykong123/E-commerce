@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Awesome Shop | AdminPanel</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<style>
+    .container-fluid{
+        width: 90%;
+        height: auto;
+        border: 1px solid black;
+        padding: 15px;
+    }
+    .container1{
+        padding: 15px;
+    }
+    .container{
+        width: 85%;
+        height: auto;
+        border: 1px solid black;
+        padding: 15px;
+    }
+
+    .dropbtn {
+        background-color: white;
+        border: none;
+        cursor: pointer;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown a:hover {background-color: #ddd;}
+    .show {display: block;}
+    .arrow {
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+    }
+    .down{
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+    .up {
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+    }
+
+    .dropbtn1 {
+        color: black;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+    .dropdown1 {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content1 {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        z-index: 1;
+    }
+
+.dropdown-content1 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown1 a:hover {background-color: #ddd;}
+
+.show1 {display: block;}
+</style>
+
+<div class="container1">
+    <p>Awesome Shop | Admin Panel<span style="margin-left: 75%;"><a href="Homepage.html">Home | <span><a href="">Log Out</a></span></a></span></p>
+</div>
+
+<div class="container-fluid">
+    <p>All Products in stock <span><button style="float: right; background-color: blue; color: white;">Add Products</button></span></p>
+    <div class="container">                                                                     
+    <!--<div class="table-responsive"> -->         
+        <table class="table">
+          <thead>
+            <tr>
+              <th>HELLO</th>
+              <th>Name
+                <div class="dropdown1">
+                    <button onclick="myFunction1()" class="dropbtn1"><i class="arrow up"></i></button>
+                    <div id="myDropdown1" class="dropdown-content1">
+                      <a href="#">T-shirt</a>
+                      <a href="#">Computer</a>
+                      <a href="#">Laptop</a>
+                    </div>
+                  </div>                  
+              </th>
+              <th>Qty</th>
+              <th>Detail</th>
+              <th>
+                  Instock At 
+                  <span>
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn"><i class="arrow down"></i></button>
+                        <div id="myDropdown" class="dropdown-content">
+                          <a href="#">1</a>
+                          <a href="#">2</a>
+                          <a href="#">3</a>
+                        </div>
+                    </div>
+                </span>
+                </th>
+              <th>Category</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td>Hand Bag</td>
+              <td>40</td>
+              <td>Hand bag for ladies</td>
+              <td>22nd, Jan 2021</td>
+              <td>Bag</td>
+              <td>
+                  <button><i class="fa fa-edit" style="font-size:24px"></i></button>
+                  <span>&nbsp;<button><i class="fa fa-trash-o" style="font-size:24px"></i></button></span>  
+                </td>
+            </tr>
+            <tr>
+               <td></td>
+               <td>T-shirt</td>
+               <td>38</td>
+               <td>Long sleeve T-shirt</td>
+               <td>10th, Jan 2021</td>
+               <td>Cloth</td>
+               <td>
+                <button><i class="fa fa-edit" style="font-size:24px"></i></button>
+                &nbsp;<button><i class="fa fa-trash-o" style="font-size:24px"></i></button>
+               </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Men's Bag</td>
+                <td>41</td>
+                <td>Leather bag</td>
+                <td>06th, Jan 2021</td>
+                <td>Bag</td>
+                <td>
+                    <button><i class="fa fa-edit" style="font-size:24px"></i></button>
+                    <span>&nbsp;<button><i class="fa fa-trash-o" style="font-size:24px"></i></button></span>  
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Computer Dell 2320</td>
+                <td>20</td>
+                <td>Laptop computers</td>
+                <td>02nd, Jan 2021</td>
+                <td>Electronics</td>
+                <td>
+                    <button><i class="fa fa-edit" style="font-size:24px"></i></button>
+                    <span>&nbsp;<button><i class="fa fa-trash-o" style="font-size:24px"></i></button></span>  
+                </td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+      
+</div>
+
+<script>
+    /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+
+    function myFunction1() {
+        document.getElementById("myDropdown1").classList.toggle("show");
+    }
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn1')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content1");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show1')) {
+                    openDropdown.classList.remove('show1');
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Shop | register</title>
+    <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<style>
+    .form-layer{
+        border: black solid 1px;
+        padding: 20px;
+        height: auto;
+        width: 550px;
+        margin: 0 auto;
+		overflow-x: none;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-layer">
+            <form action="http://localhost:3000/register" class="form-group" method="POST" onsubmit="return validation()">
+                <div class="col-md-12 mb-2">
+                    <h3 style="text-align: center;">Welcome to Awesome Shop</h3><br>
+                    <p style="text-align: center;">Don't have an account? Create your own account, it takes less than a minute</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-2 mt-2">
+                        <label for="user">Username</label>
+                        <input type="text" class="form-control" placeholder="" name="username" id="user">
+                        <span id="username" class="text-danger font-weight-bold"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-2 mt-2">
+                        <label for="">Email address</label>
+                        <input type="text" class="form-control" placeholder="" name="email" id="emails">
+                        <span id="emailids" class="text-danger font-weight-bold"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-2 mt-2">
+                        <label for="">Password</label>
+                        <input type="password" class="form-control" placeholder="" name="password" id="pass">
+                        <span id="passwords" class="text-danger font-weight-bold"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-2 mt-2">
+                        <label for="">Confirm Password</label>
+                        <input type="text" class="form-control" placeholder="" name="confirm-password" id="conpass">
+                        <span id="confrmpass" class="text-danger font-weight-bold"></span>
+                        &nbsp;<input type="checkbox" required id="check" onclick="checkMe()">&nbsp;
+                        I accept Terms and Conditions
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 mb-2 mt-2">
+                      
+                            <button type="submit" class="btn btn-primary" style="width: 100%; border: 1.5px solid black;"> Sign Up</button>
+                    
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <div class="signin">
+        <div style="text-align: center; width: 100%;">
+            <div class="" style="margin-top: 10px;">
+                Already have an account?
+                <a href="login.html">Sign in</a>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+		function validation(){
+
+			var user = document.getElementById('user').value;
+			var pass = document.getElementById('pass').value;
+			var confirmpass = document.getElementById('conpass').value;
+			var emails = document.getElementById('emails').value;
+
+			if(user == ""){
+				document.getElementById('username').innerHTML =" ** Please fill the username field";
+				return false;
+			}
+			if((user.length <= 2) || (user.length > 20)) {
+				document.getElementById('username').innerHTML =" ** Username lenght must be between 2 and 20";
+				return false;	
+			}
+			if(!isNaN(user)){
+				document.getElementById('username').innerHTML =" ** only characters are allowed";
+				return false;
+			}
+
+			if(pass == ""){
+				document.getElementById('passwords').innerHTML =" ** Please fill the password field";
+				return false;
+			}
+			if((pass.length <= 4) || (pass.length > 10)) {
+				document.getElementById('passwords').innerHTML =" ** Passwords lenght must be between  4 and 10";
+				return false;	
+			}
+
+
+			if(pass!=confirmpass){
+				document.getElementById('confrmpass').innerHTML =" ** Password does not match the confirm password";
+				return false;
+			}
+
+			if(confirmpass == ""){
+				document.getElementById('confrmpass').innerHTML =" ** Please fill the confirmpassword field";
+				return false;
+			}
+			if(emails == ""){
+				document.getElementById('emailids').innerHTML =" ** Please fill the email idx` field";
+				return false;
+			}
+			if(emails.indexOf('@') <= 0 ){
+				document.getElementById('emailids').innerHTML =" ** @ Invalid Email Format";
+				return false;
+			}
+			if((emails.charAt(emails.length-4)!='.') && (emails.charAt(emails.length-3)!='.')){
+				document.getElementById('emailids').innerHTML =" ** . Invalid Email Format";
+				return false;
+			}
+		}
+
+		function checkMe(){
+			var cb = document.getElementById("check");
+			if(cb.checked==true){
+				submit.style.display;
+			}else{
+				style.display="You must accept all item before signin";
+			}
+		}
+
+	</script>
+</body>
+</html>
